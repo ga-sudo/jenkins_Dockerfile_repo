@@ -11,7 +11,7 @@ pipeline {
         stage('Deleting Redundant images'){
             steps{
                 sh '''
-                docker rmi $(docker images -q -f dangling=true)
+                docker image prune -af
                 '''
                 }
             }

@@ -15,7 +15,7 @@ pipeline {
                 '''
                 }
             }
-        stage('listing all docker images') {
+        stage('listing remaining docker images') {
             steps {
                 sh '''
                 docker image ls
